@@ -207,3 +207,51 @@
 .conB_small_container p {
     font-size: 15px;
 }
+.table_title {
+	text-align: center;
+	
+}
+.table_title table{
+	display: inline-block;
+	font-size : 30px;
+}
+.elo_Table {
+	padding-top: 20px;
+    padding-bottom: 150px;
+    background-color: rgba(242, 242, 242, 1);
+	
+	text-align: center;
+}
+.elo_Table>table{
+	
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+	border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+.elo_Table tbody{
+	width: 50%;
+}
+.elo_Table th, .elo_Table td{
+	
+	border-bottom: 1px solid #444444;
+	text-align: center;
+	
+}
+.elo_Table thead td{
+	padding:10px;
+}
+.champion{
+	padding: 2px;
+}
+.elo_Table thead tr {
+    background-color: #0d47a1;
+    color: #ffffff;
+  }
+.elo_Table tbody tr:nth-child(2n) {
+    background-color: #bbdefb;
+  }
+.elo_Table tbody tr:nth-child(2n+1) {
+    background-color: #e3f2fd;
+  }

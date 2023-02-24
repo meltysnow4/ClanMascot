@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--          link 선언          -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style_index.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_index.css">
 
     <!--          script 선언          -->
     <script src="https://kit.fontawesome.com/e1bd1cb2a5.js"></script>
@@ -26,13 +26,13 @@
 
 <body>
 <!-- 헤더 include -->
-<%@ include file= './header.jsp'%>
+<%@ include file= '/header.jsp'%>
    
 <!-- 메인 include -->
-<%@ include file= './main.jsp'%>
+<%@ include file= '/main.jsp'%>
     
 <!--푸터 inlcude  -->
-<%@ include file= './footer.jsp'%>
+<%@ include file= '/footer.jsp'%>
     
 </body>
 

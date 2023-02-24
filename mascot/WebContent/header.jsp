@@ -3,7 +3,7 @@
  <header>
         <div class="header_container">
             <div class="logo_container">
-                <a href="./index.jsp">MASCOT</a>
+                <a href="/index.jsp">MASCOT</a>
             </div>
             <div class="nav_container" id="nav_menu">
                 <div class="menu_container">
@@ -36,8 +36,8 @@
                 </div>
                 <div class="login_container">
                     <ul class="login">
-                        <li class="menu_login"><a class="menu_title" href="#">로그인</a></li>
-                        <li class="menu_join"><a class="menu_title" href="#">회원가입</a></li>
+                        <li class="menu_login"><a class="menu_title" href="/member/login.jsp">로그인</a></li>
+                        <li class="menu_join"><a class="menu_title" href="/member/join.jsp">회원가입</a></li>
                     </ul>
                 </div>
             </div>
