@@ -4,8 +4,9 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:useBean id="eloDAO" class="elo.EloDAO"/>
-    
+
 <!DOCTYPE html>
+
  <div class="main_container">
         <div class="conA">
             <div class="slide img1"></div>

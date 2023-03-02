@@ -9,7 +9,7 @@ public class ConnectionFactory {
 	public static final int MSSQL=3;
 	public static final int MYSQL=4;
 	
-	private String url="localhost";
+	private String url="yunshll.cafe24.com";
 	private String port="1521";
 	private String dbname="디비명";
 	private String dbuser="유저명";
@@ -56,9 +56,9 @@ public class ConnectionFactory {
 		
 		else if(dbms==ConnectionFactory.MYSQL) {
 			try {
-				String dbURL = "jdbc:mysql://localhost:3306/mascot?characterEncoding=UTF-8&serverTimezone=UTC";
-				String dbID = "root";
-				String dbPassword = "dktpfldk4680!";
+				String dbURL = "jdbc:mysql://yunshll.cafe24.com:3306/yunshll?characterEncoding=UTF-8&serverTimezone=UTC";
+				String dbID = "yunshll";
+				String dbPassword = "fpalffldk4680!";
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				conn=DriverManager.getConnection(dbURL, dbID, dbPassword);
 			} catch (ClassNotFoundException e) {
