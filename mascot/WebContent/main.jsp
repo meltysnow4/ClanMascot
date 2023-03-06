@@ -1,18 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%-- <%@page import="java.util.*,elo.*" %> --%>
     <%@page import="java.util.*,elo.*" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
 
 <jsp:useBean id="eloDAO" class="elo.EloDAO"/>
 
 <!DOCTYPE html>
 
  <div class="main_container">
-        <div class="conA">
+        <!-- <div class="conA">
             <div class="slide img1"></div>
             <div class="slide img2"></div>
             <div class="slide img3"></div>
-        </div>
+        </div> -->
         <!-- <div class="conB">
             <div class="conB_title">
                 <h3>About</h3>
@@ -92,6 +94,7 @@
 	// 빈 가져옴
 	for(int i=0;i<list.size();i++){
 		EloDTO eloDTO = (EloDTO)list.get(i);
+		
 	%>
 	<tr>
 		<c:set var="rowNum" value="<%=eloDTO.getRowNum() %>"/>

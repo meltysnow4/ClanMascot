@@ -1,7 +1,8 @@
 package poolfact;
 
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Vector;
 
 public class ConnectionPool {
 	
@@ -23,15 +24,18 @@ public class ConnectionPool {
 		this.initCon=initCon;
 		this.maxCon=maxCon;
 		cf=new ConnectionFactory();
+		System.out.println(cf);
 		pool=new Vector();
 		for(int i=0;i<initCon;i++) {
 			pool.add(createConnection());
 		}
 	}
 	public static synchronized ConnectionPool getInstance() throws SQLException{
+		System.out.println("before"+cp);
 		if(cp==null) {
-			cp=new ConnectionPool(4,20);
+			cp=new ConnectionPool(4,22);
 		}
+		System.out.println("after: "+cp);
 		return cp;
 	}
 	
@@ -68,9 +72,12 @@ public class ConnectionPool {
 		return conn;
 	}
 	
+	
 	private Connection createConnection() throws SQLException{
-		Connection conn=cf.getConnection(ConnectionFactory.MYSQL);
+		Connection conn=cf.getConnection(ConnectionFactory.MARIADB);
+		
 		System.out.println("== a connection was created");
+		System.out.println(conn);
 		return conn;
 	}
 	

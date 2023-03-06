@@ -34,7 +34,7 @@ public class EloDAO {
 			
 			try {
 				c = pool.getConnection();
-				query = "SELECT count(*) from "+board;
+				query = "SELECT count(*) yunshll.from "+board;
 				p=c.prepareStatement(query);
 				r=p.executeQuery(query);
 				r.next();
@@ -59,7 +59,7 @@ public class EloDAO {
 			ArrayList eloList = new ArrayList();
 			try {
 				c = pool.getConnection();
-				query ="SELECT *, b.champion_img  FROM user_elo_data a\r\n" + 
+				query ="SELECT *, b.champion_img  FROM yunshll.user_elo_data a\r\n" + 
 						"INNER JOIN champion_name_map b\r\n" + 
 						"on a.most_played_champion = b.champion_name_kr";
 				p=c.prepareStatement(query);
