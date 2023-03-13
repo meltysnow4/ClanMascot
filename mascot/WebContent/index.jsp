@@ -30,6 +30,7 @@
    
 <!-- 메인 include -->
 <%@ include file= '/main.jsp'%>
+<%-- <%@ include file= '/test.jsp'%> --%>
     
 <!--푸터 inlcude  -->
 <%@ include file= '/footer.jsp'%>

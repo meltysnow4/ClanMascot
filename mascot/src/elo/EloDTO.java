@@ -4,11 +4,32 @@ public class EloDTO {
 	private int rowNum;
 	private String user_id;
 	private double win_rate;
-	private String num_games;
+	private int num_games;
 	private double avg_kda;
 	private String most_played_champion;
 	private String num_games_most_played;
 	private double rating;
+	private String user_lol_tear;
+	private String user_position;
+	private String descr;
+	public String getDescr() {
+		return descr;
+	}
+	public void setDescr(String descr) {
+		this.descr = descr;
+	}
+	public String getUser_lol_tear() {
+		return user_lol_tear;
+	}
+	public void setUser_lol_tear(String user_lol_tear) {
+		this.user_lol_tear = user_lol_tear;
+	}
+	public String getUser_position() {
+		return user_position;
+	}
+	public void setUser_position(String user_position) {
+		this.user_position = user_position;
+	}
 	public int getRowNum() {
 		return rowNum;
 	}
@@ -27,10 +48,10 @@ public class EloDTO {
 	public void setWin_rate(double win_rate) {
 		this.win_rate = win_rate;
 	}
-	public String getNum_games() {
+	public int getNum_games() {
 		return num_games;
 	}
-	public void setNum_games(String num_games) {
+	public void setNum_games(int num_games) {
 		this.num_games = num_games;
 	}
 	public double getAvg_kda() {

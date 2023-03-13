@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<Server port="8704" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+
+  <GlobalNamingResources>
+
+    <Resource name="UserDatabase" auth="Container"
+              type="org.apache.catalina.UserDatabase"
+              description="User database that can be updated and saved"
+              factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
+              pathname="conf/tomcat-users.xml" />
+	  <Resource name="jdbc/yunshll"
+
+	    auth="Container"
+	
+	    type="javax.sql.DataSource"
+	
+	    driverClassName="org.mariadb.jdbc.Driver"
+	
+	    url="jdbc:mariadb://localhost:3306/yunshll"
+	
+	    username="yunshll"
+	
+	    password="fpalffldk4680!"
+	
+	    maxActive="20"
+	
+	    maxIdle="10"
+	
+	    maxWait="3000"/>
+	
+	    <!-- Mysql JNDI -->
+    <!-- Resource name="jdbc/yunshll"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost/dbname"
+              username="dbuser"
+              password="dbpasswd"
+              maxActive="20"
+              maxIdle="10"
+              maxWait="3000"/ -->
+
+    <!-- Oracle JNDI -->
+    <!-- Resource name="jdbc/yunshll"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="oracle.jdbc.driver.OracleDriver"
+              url="jdbc:oracle:thin:@IP:1521:ORCL"
+              username="dbuser"
+              password="dbpasswd"
+              maxActive="10"
+              maxIdle="5"
+              maxWait="3000"/ -->
+
+  </GlobalNamingResources>
+
+  <Service name="yunshll">
+
+    <!-- Do not modify the specified port number! -->
+    <Connector port="8703" protocol="HTTP/1.1"
+               connectionTimeout="20000" />
+
+    <Engine name="yunshll" defaultHost="mascotclan.com">
+
+      <Realm className="org.apache.catalina.realm.LockOutRealm">
+        <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+               resourceName="UserDatabase"/>
+      </Realm>
+
+      <Host name="mascotclan.com"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true">
+	  <!-- <Context docBase="root" path="/" reloadable="true" source="org.eclipse.jst.jee.server:mascot"/> -->
+      </Host>
+    </Engine>
+
+  </Service>
+
+</Server>

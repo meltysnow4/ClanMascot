@@ -224,14 +224,14 @@
 }
 .elo_Table>table{
 	
-	width: 50%;
+	width: 60%;
 	display: inline-block;
 	text-align: center;
 	border-top: 1px solid #444444;
     border-collapse: collapse;
 }
 .elo_Table tbody{
-	width: 50%;
+	width: 60%;
 }
 .elo_Table th, .elo_Table td{
 	
@@ -255,3 +255,7 @@
 .elo_Table tbody tr:nth-child(2n+1) {
     background-color: #e3f2fd;
   }
+.sortHeader {
+	color: #ffffff;
+	text-decoration: none;
+} 

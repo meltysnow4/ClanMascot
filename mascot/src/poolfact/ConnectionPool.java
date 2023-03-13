@@ -26,14 +26,16 @@ public class ConnectionPool {
 		cf=new ConnectionFactory();
 		System.out.println(cf);
 		pool=new Vector();
+		System.out.println("pool : "+pool);
 		for(int i=0;i<initCon;i++) {
+			System.out.println("for : "+pool);
 			pool.add(createConnection());
 		}
 	}
 	public static synchronized ConnectionPool getInstance() throws SQLException{
 		System.out.println("before"+cp);
 		if(cp==null) {
-			cp=new ConnectionPool(4,22);
+			cp=new ConnectionPool(2,22);
 		}
 		System.out.println("after: "+cp);
 		return cp;
@@ -74,6 +76,7 @@ public class ConnectionPool {
 	
 	
 	private Connection createConnection() throws SQLException{
+		System.out.println("createconn : "+ cf);
 		Connection conn=cf.getConnection(ConnectionFactory.MARIADB);
 		
 		System.out.println("== a connection was created");

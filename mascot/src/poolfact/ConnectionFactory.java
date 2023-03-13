@@ -57,16 +57,21 @@ public class ConnectionFactory {
 		 * else
 		 */ if (dbms == ConnectionFactory.MARIADB) {
 			try {
-				String dbURL = "jdbc:mariadb://yunshll.cafe24.com:3306/yunshll?characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true";
+				String dbURL = "jdbc:mysql://localhost:3306/yunshll?characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true";
 				String dbID = "yunshll";
 				String dbPassword = "fpalffldk4680!";
-				Class.forName("org.mariadb.jdbc.Driver");
+				//String dbURL = "jdbc:mysql://localhost:3306/mascot?characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true";
+				//String dbID = "root";
+				//String dbPassword = "dktpfldk4680!";
+				
+				//Class.forName("org.mariadb.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				System.out.println("CF의 Connection ");
 				/* Class.forName("org.gjt.mm.mysql.Driver"); */
 				conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 			} catch (ClassNotFoundException e) {
 				// TODO: handle exception
-				System.out.println(e);
+				throw new IllegalStateException("드라이버 불러오기 실패", e);
 			}
 		}
 		return conn;
